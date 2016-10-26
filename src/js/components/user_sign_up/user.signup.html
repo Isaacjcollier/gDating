@@ -1,0 +1,16 @@
+<h2 class="signup-form-text">Sign Up</h2>
+<hr>
+
+<form ng-submit="userCtrl.register()" novalidate>
+  <div class="form-group">
+    <label for="username" class="signup-form-text">Username</label>
+    <input type="text" class="form-control" id="username" ng-model="userCtrl.newUser.username">
+  </div>
+  <div class="form-group">
+    <label for="password" class="signup-form-text">Password</label>
+    <input type="text" class="form-control" id="password" ng-model="userCtrl.newUser.password">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-success">Submit</button>
+  </div>
+</form>
