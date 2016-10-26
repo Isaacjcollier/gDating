@@ -1,0 +1,16 @@
+<h2 class="member-list-title">Take a Look at our members</h2>
+<hr>
+
+<form ng-submit="memberListCtrl.register()" novalidate>
+  <div class="form-group">
+    <button type="submit" class="btn btn-success">Generate Members</button>
+  </div>
+</form>
+
+<div class="col-md-3 scrollbox">
+  <div class="member-list-text" ng-repeat="member in memberListCtrl.member">
+    <h4>Username: {{ member.username }}</h4>
+  </div>
+</div>
+
+<!-- overflow -->

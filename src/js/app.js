@@ -11,6 +11,7 @@
       'gDating.controller.user',
       'gDating.controller.login',
       'gDating.controller.home',
+      'gDating.controller.memberList',
       'gDating.service.members'
     ]);
 

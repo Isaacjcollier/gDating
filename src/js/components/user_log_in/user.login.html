@@ -1,7 +1,7 @@
 <h2 class="login-form-text">Log In</h2>
 <hr>
 
-<form ng-submit="userLoginCtrl.register()" novalidate>
+<form ng-submit="userLoginCtrl.register" novalidate>
   <div class="form-group">
     <label for="username" class="login-form-text">Username</label>
     <input type="text" class="form-control" id="username" ng-model="userCtrl.newUser.username">
@@ -16,8 +16,5 @@
 
 </form>
 
-<div class="container scrollbox">
-  <p class="login-form-text" ng-repeat="member in userLoginCtrl.member">{{ member }}</p>
-</div>
 
 <!-- overflow -->

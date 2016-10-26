@@ -4,19 +4,12 @@
     .module('gDating.controller.login', [])
     .controller('userLoginController', userLoginController);
 
-  userLoginController.$inject = ['memberService'];
+  userLoginController.$inject = [];
 
-  function userLoginController(memberService) {
+  function userLoginController() {
     const vm = this;
 
-    vm.test = 'This is the user login controller';
-
-    vm.register = function() {
-      memberService.members()
-      .then((member) => {
-        vm.member = member.data.data;
-      });
-    };
+    vm.register ='This is the user login controller';
   }
 
 })();

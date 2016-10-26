@@ -1,12 +1,12 @@
 (function() {
 
   angular
-    .module('gDating.controller.login', [])
-    .controller('userLoginController', userLoginController);
+    .module('gDating.controller.memberList', [])
+    .controller('memberListController', memberListController);
 
-  userLoginController.$inject = ['memberService'];
+  memberListController.$inject = ['memberService'];
 
-  function userLoginController(memberService) {
+  function memberListController(memberService) {
     const vm = this;
 
     vm.test = 'This is the user login controller';
