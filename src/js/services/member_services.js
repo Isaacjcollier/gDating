@@ -7,10 +7,18 @@
   memberService.$inject = ['$http'];
 
   function memberService($http) {
-    this.sanity = 'yo';
+    const vm = this;
 
-    this.members = function(limit) {
-      return $http.get('http://galvanize-student-apis.herokuapp.com/gdating/members?limit=50');
+    vm.individualMember = {}
+
+    vm.selectMember = function(member) {
+      vm.individualMember.singleMember = member;
+      console.log(vm.individualMember.singleMember);
+      return vm.individualMember.singleMember
+    }
+
+    vm.members = function() {
+      return $http.get('http://galvanize-student-apis.herokuapp.com/gdating/members/?limit=25');
     };
 
   }
@@ -20,19 +28,18 @@
 /*
 
 $ curl http://galvanize-student-apis.herokuapp.com/gdating/members/
-:::each object is this:::
+:::each object is vm:::
 
 {
   "data":{
     "_id":"5810d7abfff5051100cee950"
-    "username":"asl;djfasljkhdflaskhdfaslkhdf"
-    "dob":"1990-02-20T07:00:00.000Z"
     "password":"$2a$10$/aMonQfENoOPMpBJGljNoO21GKmXOulJqNk0Q2RqQU4K/pEbOe/3q"
+    "slug":"asl;djfasljkhdflaskhdfaslkhdfaslkjdhfaskdjfhasdjfh"
+
     "description":"asdfjhaskldjfhaslfkjh"
     "email":"ashdkfalksjhf@fasdlfjhas.com"
     "phone":"1234567890"
-    "slug":"asl;djfasljkhdflaskhdfaslkhdfaslkjdhfaskdjfhasdjfh"
-    "__v":0
+
     "_matches":[]
     "interestedIn":[0,1,2,3]
     "gender":0

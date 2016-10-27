@@ -6,10 +6,30 @@
   color: yellow;
 }
 
-.scrollbox {
+.scroll-box {
   background-color: white;
   width: 500px;
   height: 500px;
   overflow: scroll;
   border: 2px solid black;
+}
+
+.scroll-box-information {
+  margin: 1%;
+  padding: 2%;
+  border: 2px solid black;
+}
+
+.selected-member-information {
+  margin: 1%;
+}
+
+.view-more-member-info {
+  margin: 1%;
+  float: right;
+}
+
+.selected-member-image {
+  width: 266px;
+  height: 266px;
 }

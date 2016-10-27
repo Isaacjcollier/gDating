@@ -17,6 +17,11 @@
         vm.member = member.data.data;
       });
     };
+
+    vm.selectMember = function(argument) {
+      vm.singleMember =  memberService.selectMember(argument);
+    }
+
   }
 
 })();

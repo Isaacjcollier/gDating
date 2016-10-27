@@ -7,10 +7,25 @@
   </div>
 </form>
 
-<div class="col-md-3 scrollbox">
-  <div class="member-list-text" ng-repeat="member in memberListCtrl.member">
-    <h4>Username: {{ member.username }}</h4>
+<div class="col-md-3 scroll-box">
+  <div class="member-list-text scroll-box-information" ng-repeat="member in memberListCtrl.member">
+    <h4>{{ member.names.firstName }} {{member.names.lastName}}</h4>
+    <a class="btn btn-success view-more-member-info" ng-click="memberListCtrl.selectMember(member)">View More Info</a>
+      <p>Born: {{member.dob | date}}</p>
+      <p><img src="{{member.avatar}}" alt="" /></p>
   </div>
+</div>
+
+<div class="col-md-offset-1 col-md-3 scroll-box">
+<!-- memberListCtrl.singleMember -->
+  <div class="selected-member-information">
+    <h1>{{memberListCtrl.singleMember.names.firstName}}</h1>
+    <h1>{{memberListCtrl.singleMember.names.lastName}}</h1>
+    <p>{{memberListCtrl.singleMember.data.description}}</p>
+    <img class="selected-member-image" src="{{memberListCtrl.singleMember.avatar}}" alt=""/>
+
+  </div>
+
 </div>
 
 <!-- overflow -->
